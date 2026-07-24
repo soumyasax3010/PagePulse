@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PagePulse thoughtfully audits website performance, metadata, HTTPS, robots.txt, and sitemap availability."
+    />
+    <meta name="theme-color" content="#faf7f3" />
+    <title>PagePulse — Thoughtful Website Audits</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="paper-grain" aria-hidden="true"></div>
+    <div class="editorial-curve editorial-curve--top" aria-hidden="true"></div>
+    <div class="editorial-curve editorial-curve--bottom" aria-hidden="true"></div>
+    <div class="margin-stars" aria-hidden="true">
+      <span>✦</span>
+      <span>·</span>
+      <span>✧</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="PagePulse home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" role="img">
+            <path d="M5 19h7l3.2-9 5.2 17 3.1-8H31"></path>
+          </svg>
+        </span>
+        <span class="brand-name">PagePulse</span>
+      </a>
+
+      <p class="edition-note">
+        <span>Website audit</span>
+        <span aria-hidden="true">/</span>
+        <span>Issue No. 01</span>
+      </p>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <div class="hero__heading">
+            <p class="overline">A calmer way to understand your website</p>
+            <h1 id="hero-title">
+              Website health,
+              <em>beautifully simplified.</em>
+            </h1>
+            <div class="signature-line" aria-hidden="true">
+              <span></span>
+            </div>
+          </div>
+
+          <div class="hero__introduction">
+            <span class="intro-star" aria-hidden="true">✦</span>
+            <p>
+              Technical insights, wrapped in a calmer experience. Check the essentials without the
+              noise.
+            </p>
+            <span class="intro-caption">Thoughtful audits for curious people.</span>
+          </div>
+        </div>
+
+        <form id="audit-form" class="audit-form" aria-describedby="url-hint">
+          <label for="url-input">Website address</label>
+          <div class="audit-form__controls">
+            <span class="input-mark" aria-hidden="true">↗</span>
+            <input
+              id="url-input"
+              name="url"
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="Paste a website URL (e.g. https://github.com)"
+              spellcheck="false"
+              required
+            />
+            <button id="analyze-button" type="submit">
+              <span class="button-label">Analyze</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p id="url-hint" class="form-hint">HTTP and HTTPS addresses are welcome.</p>
+        </form>
+
+        <section class="feature-list" aria-label="What PagePulse checks">
+          <article class="feature-item">
+            <div class="feature-item__meta">
+              <span>01</span>
+              <span class="feature-icon" aria-hidden="true">⌁</span>
+            </div>
+            <h2>Secure connection</h2>
+            <p>See whether a website is protected with HTTPS.</p>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-item__meta">
+              <span>02</span>
+              <span class="feature-icon" aria-hidden="true">Aa</span>
+            </div>
+            <h2>Page details</h2>
+            <p>Read the title, description, and canonical address.</p>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-item__meta">
+              <span>03</span>
+              <span class="feature-icon" aria-hidden="true">⌘</span>
+            </div>
+            <h2>Discovery files</h2>
+            <p>Look for robots.txt and sitemap.xml automatically.</p>
+          </article>
+        </section>
+      </section>
+
+      <section
+        id="empty-state"
+        class="report-state empty-state"
+        aria-labelledby="empty-state-title"
+      >
+        <div class="empty-illustration" aria-hidden="true">
+          <span class="empty-illustration__page"></span>
+          <span class="empty-illustration__line empty-illustration__line--one"></span>
+          <span class="empty-illustration__line empty-illustration__line--two"></span>
+          <span class="empty-illustration__orbit"></span>
+          <span class="empty-illustration__star">✦</span>
+        </div>
+        <div class="empty-state__copy">
+          <p class="section-label">Your report</p>
+          <h2 id="empty-state-title">Your website health report<br />will appear here.</h2>
+          <p>Paste any URL above to begin your audit.</p>
+        </div>
+      </section>
+
+      <section
+        id="loading-state"
+        class="report-state loading-state"
+        aria-labelledby="loading-title"
+        aria-live="polite"
+        hidden
+      >
+        <div class="loading-flower" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <i>✦</i>
+        </div>
+        <div>
+          <p class="section-label">A small moment</p>
+          <h2 id="loading-title">Gathering your report</h2>
+          <p id="loading-message" class="loading-message">🌼 Checking website security...</p>
+          <div class="loading-rule" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section
+        id="error-card"
+        class="report-state error-card reveal-card"
+        aria-labelledby="error-title"
+        role="alert"
+        hidden
+      >
+        <span class="error-card__mark" aria-hidden="true">!</span>
+        <div class="error-card__content">
+          <p class="section-label">A gentle pause</p>
+          <h2 id="error-title">We couldn’t complete that audit</h2>
+          <p id="error-message">Please check the URL and try again.</p>
+          <p id="error-detail" class="error-card__detail" hidden></p>
+          <button id="try-again-button" class="text-button" type="button">
+            Try another address <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="results-section"
+        class="results-card reveal-card"
+        aria-labelledby="result-title"
+        hidden
+      >
+        <header class="results-card__header">
+          <div>
+            <p class="section-label">Website health report</p>
+            <h2 id="result-title">Website title</h2>
+            <p id="result-summary" class="results-card__summary">Your page details are ready.</p>
+          </div>
+          <span id="result-status-pill" class="status-stamp">
+            <span aria-hidden="true">✦</span>
+            <span id="result-status-label">Report ready</span>
+          </span>
+        </header>
+
+        <dl class="results-grid">
+          <div class="result-item result-item--wide" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">Aa</span>
+              Page title
+            </dt>
+            <dd id="result-page-title">—</dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">●</span>
+              Website status
+            </dt>
+            <dd>
+              <span id="result-status">—</span>
+              <small id="result-status-detail">—</small>
+            </dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">◷</span>
+              Response time
+            </dt>
+            <dd>
+              <span id="result-response-time">—</span>
+              <small id="result-response-time-detail">Page fetch duration</small>
+            </dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">⌁</span>
+              Connection
+            </dt>
+            <dd>
+              <span id="result-https">—</span>
+              <small id="result-https-detail">—</small>
+            </dd>
+          </div>
+
+          <div class="result-item result-item--wide" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">↗</span>
+              Final address
+            </dt>
+            <dd><a id="result-final-url">—</a></dd>
+          </div>
+
+          <div class="result-item result-item--wide" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">≡</span>
+              Meta description
+            </dt>
+            <dd id="result-meta-description">—</dd>
+          </div>
+
+          <div class="result-item result-item--wide" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">◇</span>
+              Canonical address
+            </dt>
+            <dd><a id="result-canonical-url">—</a></dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">R</span>
+              Robots.txt
+            </dt>
+            <dd>
+              <span id="result-robots">—</span>
+              <small>Search crawler guidance</small>
+            </dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">⌘</span>
+              Sitemap
+            </dt>
+            <dd>
+              <span id="result-sitemap">—</span>
+              <small>Site discovery map</small>
+            </dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">↻</span>
+              Report source
+            </dt>
+            <dd>
+              <span id="result-cache-hit">—</span>
+              <small id="result-cache-detail">—</small>
+            </dd>
+          </div>
+
+          <div class="result-item" data-tone="neutral">
+            <dt>
+              <span class="result-icon" aria-hidden="true">◷</span>
+              Report age
+            </dt>
+            <dd>
+              <span id="result-cache-age">—</span>
+              <small>Since this report was created</small>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://digitalheroes.co.in/" target="_blank" rel="noopener noreferrer">
+        Built for Digital Heroes Training Task
+      </a>
+      <p>
+        Built by Soumya Saxena
+        <span aria-hidden="true">·</span>
+        Crafted with HTML, CSS &amp; TypeScript
+      </p>
+    </footer>
+  </body>
+</html>

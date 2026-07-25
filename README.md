@@ -88,8 +88,12 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
 
 
 ## Architecture
+<p align="center">
+  <img src="assets/architecture.png" alt="PagePulse Architecture" width="900">
+</p>
 
-Requests pass through Express middleware for logging, JSON parsing, and rate limiting before reaching the audit controller. The audit service coordinates normalized-URL caching, page fetching, metadata extraction, and discovery-file checks.
+Requests flow through Express middleware for logging and rate limiting before reaching the audit controller. Cached results are returned immediately when available. Otherwise, the audit service fetches the target website, extracts metadata, checks discovery files, updates the cache, and returns a structured audit response.
+
 
 ```text
 Client

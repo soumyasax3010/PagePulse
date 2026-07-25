@@ -1,4 +1,8 @@
 # PagePulse
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-28%20Passing-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 > Thoughtful Website Health Audits
 

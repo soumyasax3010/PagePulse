@@ -46,23 +46,49 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
 
 ### Homepage
 
-![Homepage](assets/hero.png)
+<p align="center">
+  <img src="assets/hero.png" alt="Homepage" width="900">
+</p>
+
+---
 
 ### Healthy Website Report
 
-![Healthy Report](assets/youtube-healthy-report.png)
+<p align="center">
+  <img src="assets/youtube-healthy-report.png" alt="Healthy Website Report" width="900">
+</p>
+
+---
 
 ### Metadata & Discovery
 
-![Metadata](assets/youtube-extra.png)
+<p align="center">
+  <img src="assets/youtube-extra.png" alt="Metadata & Discovery" width="900">
+</p>
+
+---
 
 ### Restricted Website Handling
 
-![Restricted Report](assets/restricted-report.png)
+<p align="center">
+  <img src="assets/restricted-report.png" alt="Restricted Website Report" width="900">
+</p>
+
+---
 
 ### Another Healthy Website Example
 
-![Internshala Report](assets/internshala-report.png)
+<p align="center">
+  <img src="assets/internshala-report.png" alt="Internshala Website Report" width="900">
+</p>
+
+---
+
+### Discovery & Cache Information
+
+<p align="center">
+  <img src="assets/internshala-extra.png" alt="Internshala Details" width="900">
+</p>
 
 ### Discovery & Cache Information
 

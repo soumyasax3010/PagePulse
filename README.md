@@ -1,22 +1,18 @@
 # PagePulse
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-28%20Passing-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
-
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Tests](https://img.shields.io/badge/Tests-28%20Passing-brightgreen)](#testing)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 > Thoughtful Website Health Audits
 
 PagePulse audits public websites for availability, HTTPS, response time, metadata, and discovery files. It provides a focused browser interface and a structured API backed by caching, rate limiting, production logging, and automated tests.
 
 ---
 
-## Live Demo
 | Resource | Link |
 |----------|------|
-| Live Demo | https://pagepulse-b1ab.onrender.com |
-| GitHub Repository | https://github.com/soumyasax3010/PagePulse |
----
-
+| Live Demo | [pagepulse-b1ab.onrender.com](https://pagepulse-b1ab.onrender.com) |
+| GitHub Repository | [soumyasax3010/PagePulse](https://github.com/soumyasax3010/PagePulse) |
 ## Features
 
 ### Website Auditing
@@ -90,10 +86,6 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
   <img src="assets/internshala-extra.png" alt="Internshala Details" width="900">
 </p>
 
-### Discovery & Cache Information
-
-![Internshala Details](assets/internshala-extra.png)
----
 
 ## Architecture
 
@@ -188,7 +180,7 @@ An upstream non-2xx response is still a completed audit when the HTTP exchange s
 - npm
 
 ```bash
-git clone <github-repository-url>
+git clone https://github.com/soumyasax3010/PagePulse.git
 cd PagePulse
 npm install
 cp .env.example .env

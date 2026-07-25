@@ -95,18 +95,6 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
 Requests flow through Express middleware for logging and rate limiting before reaching the audit controller. Cached results are returned immediately when available. Otherwise, the audit service fetches the target website, extracts metadata, checks discovery files, updates the cache, and returns a structured audit response.
 
 
-```text
-Client
-  ↓
-Express routes and middleware
-  ↓
-Audit controller
-  ↓
-Audit service ↔ In-memory cache
-  ↓
-Target website
-  ↓
-Audit service → Controller → Client
 ```
 
 See [docs/architecture.md](docs/architecture.md) for the complete request flow and [docs/task-b.md](docs/task-b.md) for design trade-offs and scalability notes.

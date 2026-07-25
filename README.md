@@ -67,7 +67,6 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
 ### Discovery & Cache Information
 
 ![Internshala Details](assets/internshala-extra.png)
-
 ---
 
 ## Architecture

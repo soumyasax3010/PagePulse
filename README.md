@@ -7,12 +7,10 @@ PagePulse audits public websites for availability, HTTPS, response time, metadat
 ---
 
 ## Live Demo
-
-| Resource          | Link                        |
-| ----------------- | --------------------------- |
-| Live Demo         | _Add Render deployment URL_ |
-| GitHub Repository | _Add GitHub repository URL_ |
-
+| Resource | Link |
+|----------|------|
+| Live Demo | https://pagepulse-b1ab.onrender.com |
+| GitHub Repository | https://github.com/soumyasax3010/PagePulse |
 ---
 
 ## Features
